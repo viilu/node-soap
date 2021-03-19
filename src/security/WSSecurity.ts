@@ -60,12 +60,21 @@ export class WSSecurity implements ISecurity {
       function pad(n) {
         return n < 10 ? '0' + n : n;
       }
+      function pad2(n) {
+        if (n < 10) {
+          return '00' + n
+        } else if (n < 100) {
+          return '0' + n
+        }
+        return n
+      }
       return d.getUTCFullYear() + '-'
         + pad(d.getUTCMonth() + 1) + '-'
         + pad(d.getUTCDate()) + 'T'
         + pad(d.getUTCHours()) + ':'
         + pad(d.getUTCMinutes()) + ':'
-        + pad(d.getUTCSeconds()) + 'Z';
+        + pad(d.getUTCSeconds()) + '.'
+        + pad2(d.getUTCMilliseconds()) + 'Z';
     }
     const now = new Date();
     const created = getDate(now);
