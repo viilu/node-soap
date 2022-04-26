@@ -1,3 +1,5 @@
+Fork of a lib for an legacy integration.
+
 # Soap [![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coveralls Status][coveralls-image]][coveralls-url] [![Gitter chat][gitter-image]][gitter-url]
 
 > A SOAP client and server for node.js.
